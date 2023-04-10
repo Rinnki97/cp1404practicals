@@ -9,6 +9,7 @@ Actual:   15 minutes
 
 
 def main():
+    """ Main function to store user emails and names, and display them."""
     email_names = {}
 
     user_email = input('Email: ')
@@ -30,6 +31,7 @@ def main():
 
 
 def get_name_from_email(user_email):
+    """ Extract the name from the given email address."""
     name = user_email.split("@")[0]
     name_parts = name.split(".")
     full_name = " ".join(name_parts).title()
