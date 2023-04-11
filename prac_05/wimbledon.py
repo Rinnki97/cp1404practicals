@@ -11,7 +11,7 @@ FILENAME = "wimbledon.csv"
 
 
 def main():
-    """ """
+    """Main function that runs the program. """
     data = get_data(FILENAME)
     champions = get_champions(data)
     countries = list(get_countries(data))
@@ -26,6 +26,7 @@ def main():
 
 
 def get_data(filename):
+    """Reads a CSV file and returns its data as a list of lists."""
     data = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()
@@ -36,6 +37,7 @@ def get_data(filename):
 
 
 def get_champions(data):
+    """Counts the number of championships won by each player."""
     champions = {}
     for row in data:
         champion = row[2]
@@ -47,6 +49,7 @@ def get_champions(data):
 
 
 def get_countries(data):
+    """Extracts the unique set of countries from the CSV data."""
     countries = set()
     for row in data:
         countries.add(row[1])
