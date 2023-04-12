@@ -8,6 +8,8 @@ Actual:   24 minutes
 """
 
 FILENAME = "wimbledon.csv"
+COUNTRY_INDEX = 1
+CHAMPION_INDEX = 2
 
 
 def main():
@@ -40,7 +42,7 @@ def get_champions(data):
     """Counts the number of championships won by each player."""
     champions = {}
     for row in data:
-        champion = row[2]
+        champion = row[CHAMPION_INDEX]
         if champion in champions:
             champions[champion] += 1
         else:
@@ -52,7 +54,7 @@ def get_countries(data):
     """Extracts the unique set of countries from the CSV data."""
     countries = set()
     for row in data:
-        countries.add(row[1])
+        countries.add(row[COUNTRY_INDEX])
     return countries
 
 
