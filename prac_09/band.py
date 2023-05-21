@@ -1,7 +1,7 @@
 class Band:
     """Represents a musical band, with members and methods for adding members and performing."""
     def __init__(self, name=""):
-        """Initialize the Band with a given name and an empty list of members."""
+        """Initialize the Band with a given name and an empty list of members"""
         self.name = name
         self.members = []
 
