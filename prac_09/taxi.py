@@ -6,7 +6,7 @@ from prac_09.car import Car
 
 
 class Taxi(Car):
-    """Specialised version of a Car that includes fare costs."""
+    """Specialised version of a Car that includes fare costs ."""
 
     def __init__(self, name, fuel, price_per_km):
         """Initialise a Taxi instance, based on parent class Car."""
